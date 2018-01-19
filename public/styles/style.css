@@ -78,7 +78,7 @@ input::placeholder {
 .listItem {
   background-color:navy;
   color:white;
-  width:20em;
+  width:70%;
   margin:10px auto;
   display:flex;
   padding:20px;

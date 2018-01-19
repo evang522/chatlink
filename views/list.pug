@@ -11,7 +11,7 @@ html(lang = 'en')
       div.list-container
         each listitem, i in list.listitems
           div.listItem.spaceBelow
-            h3.center #{listitem + ' ' + list.listitems.indexOf(listitem)}
+            h3.center #{listitem}
             button.check-item-button Check Off
         form.spaceAbove.center.additem-form(action='/additem/' + list.id, method='POST')
           input.additem-input.smallSpaceBelow(required name='listitem',placeholder='Add Item...')
