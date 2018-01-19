@@ -1,0 +1,95 @@
+/* Global Resets */
+* {
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+
+/* Global CSS */
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Buttons */
+
+
+
+/* Spacing */
+
+.smallSpaceAbove {
+  margin-top:1em;
+}
+
+.spaceAbove {
+  margin-top:3em;
+}
+
+.largeSpaceAbove {
+  margin-top:6em;
+}
+
+.smallSpaceBelow {
+  margin-bottom:1em;
+}
+
+.spaceBelow {
+  margin-bottom:3em;
+}
+
+.largeSpaceBelow {
+  margin-bottom:6em;
+}
+
+/* Centering */
+
+.center {
+  text-align:center;
+}
+
+.centerBlock {
+  display:block;
+  margin:0 auto;
+}
+
+button {
+  border:none;
+  padding:5px;
+  border-radius:4px;
+  background-color:mediumslateblue;
+  color:white;
+}
+
+input {
+  padding:10px;
+  background-color:mediumseagreen;
+  color:white;
+  border:none;
+  border-radius:5px;
+}
+
+input::placeholder {
+  color:white;
+}
+
+/* List items */
+
+.listItem {
+  background-color:navy;
+  color:white;
+  width:20em;
+  margin:10px auto;
+  display:flex;
+  padding:20px;
+  border-radius:10px;
+}
+
+
+.checked {
+  text-decoration:line-through;
+}
+
+.check-item-button {
+  margin-left:20px;
+}
