@@ -7,16 +7,20 @@ html(lang = 'en')
     link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet")
   body
     header(role='banner')
-      h1.spaceAbove.center.smallSpaceBelow The #{list.title} list:
+      h1.spaceAbove.center.smallSpaceBelow #{list.title.replace('/','').replace('-',' ')} list:
       div.list-container
         each listitem, i in list.listitems
           div.listItem.spaceBelow
             h3.center #{listitem}
             button.check-item-button Check Off
-        form.spaceAbove.center.additem-form(action='/gen/additem/' + list.id, method='POST')
+        form.spaceAbove.center.additem-form(action='/additem/' + list.id, method='POST')
           input.additem-input.smallSpaceBelow(name='listitem',placeholder='Add Item...')
           br
           button.additem-button Add Item
+        form.smallSpaceAbove.center.reset-list-form(action='/resetlist/'+list.id method='POST')
+          button Reset List
+
+
 script( src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
 script.
     $('.additem-input').focus();

@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Routes
-app.use('/gen',listRoute);
+app.use('/',listRoute);
 
 
 

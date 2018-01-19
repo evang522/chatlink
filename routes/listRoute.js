@@ -5,27 +5,8 @@ let router = express.Router();
 let List = require('../models/listModel');
 
 
-// List Url Handler
-// router.get('*',(req,res) => {
-//   let listObject = new List();
-//   listObject.listitems = [];
-//   listObject.identifier = req.originUrl;
 
-//   listObject.save((err) => {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       List.find({'identifier':'req.originalUrl'}, (err,list) => {
-//         res.render('list', {
-//           list:list
-//         });
-//       });
-//     }
-//   });
-// });
-
-
-router.get('*', (req,res) => {
+router.get('*/', (req,res) => {
   List.find({}, (err,lists)=> {
     let exists = false;
     lists.forEach((list) => {
@@ -65,6 +46,17 @@ router.post('*/additem/:id', (req,res) => {
     });
   });
 });
+
+router.post('*/resetlist/:id', (req,res) => {
+  List.update({_id:req.params.id }, {listitems:[]}, (err,list) => {
+    List.find({_id:req.params.id}, (err,list) => {
+      console.log(list[0].listitems);
+      res.redirect(list[0].identifier);
+    });
+  });
+});
+
+
 
 
 
