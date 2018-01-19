@@ -11,10 +11,10 @@ html(lang = 'en')
       div.list-container
         each listitem, i in list.listitems
           div.listItem.spaceBelow
-            h3.center #{listitem}
+            h3.center #{listitem + ' ' + list.listitems.indexOf(listitem)}
             button.check-item-button Check Off
         form.spaceAbove.center.additem-form(action='/additem/' + list.id, method='POST')
-          input.additem-input.smallSpaceBelow(name='listitem',placeholder='Add Item...')
+          input.additem-input.smallSpaceBelow(required name='listitem',placeholder='Add Item...')
           br
           button.additem-button Add Item
         form.smallSpaceAbove.center.reset-list-form(action='/resetlist/'+list.id method='POST')

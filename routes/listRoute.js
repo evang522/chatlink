@@ -41,7 +41,7 @@ router.get('*/', (req,res) => {
 router.post('*/additem/:id', (req,res) => {
   List.update({_id:req.params.id }, {$push: {listitems:req.body.listitem}}, (err,list) => {
     List.find({_id:req.params.id}, (err,list) => {
-      console.log(list[0].listitems);
+      // console.log(list[0].listitems);
       res.redirect(list[0].identifier);
     });
   });
@@ -50,7 +50,7 @@ router.post('*/additem/:id', (req,res) => {
 router.post('*/resetlist/:id', (req,res) => {
   List.update({_id:req.params.id }, {listitems:[]}, (err,list) => {
     List.find({_id:req.params.id}, (err,list) => {
-      console.log(list[0].listitems);
+      // console.log(list[0].listitems);
       res.redirect(list[0].identifier);
     });
   });
