@@ -4,7 +4,7 @@ let express = require('express');
 let mongoose = require('mongoose');
 let bodyParser = require('body-parser');
 let app = express();
-let listRoute = require('./routes/listRoute');
+let roomRoute = require('./routes/roomRoute');
 
 // Establish Public Folder
 app.use(express.static('public'));
@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Routes
-app.use('/',listRoute);
+app.use('/rooms',roomRoute);
 
 
 

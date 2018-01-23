@@ -1,0 +1,40 @@
+html(lang = 'en')
+  head
+    title Lists
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet',href='/styles/style.css', type='text/css')
+    link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet")
+  body
+    header(role='banner')
+      h1.smallSpaceAbove.center.smallSpaceBelow #{room.title.replace(/\/rooms\//gi,'')} Room
+    div.smallSpaceAbove.headerBar.center #{room.description}A chat room made just for you.
+    main(role='main')
+      section(role='region')
+        div.provide-username-popup Please set a username:
+        div.dialogueCont
+          if room.posts.length === 0
+            p.filler Looks like Nobody's said anything yet...
+          else
+            div.messageCont
+              p.userName
+              p.message
+              p.time
+        form.submit-message-form(action='/rooms/postmessage' + room.id, method = 'POST')
+          div.submitMessageCont.spaceAbove
+            button.submit Submit
+            textarea.submit-message-input(resizable = false, type='text')
+
+
+
+
+
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+script.
+  let userName = '';
+  $('.submit-message-form').on('submit', (event) => {
+
+    if (!userName) {
+      event.preventDefault();
+      console.log('set username to continue');
+    }
+  });

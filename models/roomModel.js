@@ -3,11 +3,11 @@
 let mongoose = require('mongoose');
 
 
-let ListSchema = mongoose.Schema({
+let RoomSchema = mongoose.Schema({
   identifier: {
     type:String
   },
-  listitems: {
+  posts: {
     type:Array
   },
   title: {
@@ -16,4 +16,4 @@ let ListSchema = mongoose.Schema({
 }
 );
 
-let List = module.exports = mongoose.model('List', ListSchema);
+let Room = module.exports = mongoose.model('Room', RoomSchema);

@@ -1,24 +1,24 @@
 {
-  "name": "lists",
+  "name": "chatlink",
   "version": "1.0.0",
-  "description": "An app that generates a list at whatever URL you like",
+  "description": "An app that generates a chatroom at whatever URL you like",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/evang522/lists.git"
+    "url": "git+https://github.com/evang522/chatlink.git"
   },
   "keywords": [
-    "Lists"
+    "Chatlink"
   ],
   "author": "Evan Garrett",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/evang522/lists/issues"
+    "url": "https://github.com/evang522/chatlink/issues"
   },
-  "homepage": "https://github.com/evang522/lists#readme",
+  "homepage": "https://github.com/evang522/chatlink#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",

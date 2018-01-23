@@ -10,6 +10,7 @@
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  background-color:#f2f2f2;
 }
 
 /* Buttons */
@@ -53,43 +54,66 @@ body {
   margin:0 auto;
 }
 
-button {
-  border:none;
-  padding:5px;
+/* Header CSS */
+
+header {
+  padding:1em;
+  background-color:#0c4db5;
+  height:7em;
+  color:white;
+}
+
+.headerBar {
+  display:block;
+  height:2em;
+  width:100%;
+  color:black;
+}
+
+
+/* chatroom CSS */
+
+.dialogueCont {
+  background-color:white;
+  min-height:2em;
+  width:90%;
+  margin: 0 auto;
   border-radius:4px;
-  background-color:mediumslateblue;
-  color:white;
 }
 
-input {
+
+.filler {
   padding:10px;
-  background-color:mediumseagreen;
-  color:white;
-  border:none;
-  border-radius:5px;
 }
 
-input::placeholder {
-  color:white;
-}
-
-/* List items */
-
-.listItem {
-  background-color:navy;
-  color:white;
-  width:70%;
-  margin:10px auto;
+.messageCont {
   display:flex;
-  padding:20px;
-  border-radius:10px;
+}
+
+.submitMessageCont {
+  display:flex;
+  justify-content:center;
+}
+
+.submit {
+  background-color:#0fa00c;
+  border:none;
+  padding:10px;
+  width:8em;
+  border-radius:4px;
+  color:white;
+  font-weight:bold;
 }
 
 
-.checked {
-  text-decoration:line-through;
+.submit-message-input {
+  margin-left:1em;
+  width:70%;
+  overflow:hidden;
 }
 
-.check-item-button {
-  margin-left:20px;
+.provide-username-popup {
+  /* background-color:black; */
+  height:2em;
+
 }
